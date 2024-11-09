@@ -36,5 +36,5 @@ There are four PHP files and one CSS file in this project:
        - The results of each game are displayed back on the page.
      - There is also a 'Test' option in the HTML form which can be selected to play every possible combination in Rock, Paper, Scissors.
        - The results are returned to the page for the user to view.
-       - This is accomplished useing a nested for loop and will iterate nine times.
+       - This is accomplished using a conditional statement and nested for loop that will iterate a total of nine times.
  
