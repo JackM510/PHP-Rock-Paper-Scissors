@@ -31,10 +31,10 @@ There are four PHP files and one CSS file in this project:
   - If the user enters an incorrect password, a prompt will be displayed to the user on the page 'Incorrect password'.
  - From the **game.php** page, users can play Rock, Paper, Scissors with the computer by interacting with the HTML form elements.
    - Based on whether the user selects 'Rock', 'Paper', or 'Scissors', PHP will generate a random number in the background for the computers play and associate the number with the corresponding play in an Array called $names.
-     - The $names Array holds the names 'Rock', 'Paper', 'Scissors', and the random number generated for the computer will be the index referenced in the Array to deterine the computers play (0-2).
+     - The $names Array holds the names 'Rock', 'Paper', 'Scissors', and the random number generated for the computer will be the index referenced in the Array to determine the computers play (0-2).
      - The check() function uses conditional statements to determine the outcome of the game and whether the user wins or loses against the computers play.
        - The results of each game are displayed back on the page.
      - There is also a 'Test' option in the HTML form which can be selected to play every possible combination in Rock, Paper, Scissors.
        - The results are returned to the page for the user to view.
-       - This is accomplished used a nested for loop and will iterate nine times.
+       - This is accomplished useing a nested for loop and will iterate nine times.
  
