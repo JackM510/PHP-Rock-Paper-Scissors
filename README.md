@@ -14,7 +14,7 @@ There are four PHP files and one CSS file in this project:
   - game.php is the page where the user can play Rock, Paper, Scissors, against the computer.
   - The user can select Rock, Paper, or Scisssors from the HTML form and the computer will generate a random play in the background.
   - The results of each game is displayed back to the user on game.php.
-  - There is also a 'test' option on this page which will loop through every possible play in Rock, Paper, Scissors, and display the results back to the user.  
+  - There is also a 'Test' option on this page which will loop through every possible play in Rock, Paper, Scissors, and display the results back to the user.  
 - **bootstrap.php**
   - bootstrap.php is a page used for applying some basic styling to the index.php, login.php, and game.php pages.
 - **starter-template.css**
