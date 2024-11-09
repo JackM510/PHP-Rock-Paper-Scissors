@@ -23,7 +23,7 @@ There are four PHP files and one CSS file in this project:
 **Overview of the Application:**
 - The homepage of this application is **index.php**.
   - From this page, the user can select the link 'Please Log in' and be directed to login.php. 
-  - The user can also select the 'game.php' link and attempt to access the game.php without logging in (this will generate an error and the page will be killed).
+  - The user can also select the 'game.php' link and attempt to access the game.php page without logging in (this will generate an error and the page will be killed).
     - This error occurs because a username value must be passed to game.php to access the page using the superglobal variables POST and GET.
     - As a test, users can get around this by entering '?username=name' at the end of the URL on game.php (note that 'name' can be any name or set of characters). 
 - From **login.php**, the user will need to enter a username of their choosing and the correct password (which can be found in the source code) to successfully login and be directed to game.php.
