@@ -1,11 +1,10 @@
 <?php
-    // Demand the GET parameter 'username' otherwise kill the page
+    // Check username is set otherwise kill the page
     if ( ! isset($_GET['username']) || strlen($_GET['username']) < 1  ) {
         die('Name parameter missing');
     }
 
     // Logout button in the HTML form
-    // If 'logout' exists within the $_POST data array go back to index.php
     if ( isset($_POST['logout']) ) {
         header('Location: index.php');
         return;
@@ -16,13 +15,10 @@
     $names = array('Rock', 'Paper', 'Scissors');
     $human = isset($_POST["human"]) ? $_POST['human']+0 : -1;
 
-    
-    // The computer is assigned a random number between 0-2
-    // This number represents the index for each play in the plays array 
-    $computer = rand(0,2);
+    $computer = rand(0,2); // Generate a play for the computer
 
+    // Compare plays
     function check($computer, $human) {
-
         if ( $human == $computer ) {
             return "Tie";
         } else if (($human == 0 && $computer == 2) || ( $human == 1 && $computer == 0) || ( $human == 2 && $computer == 1)) { 
@@ -30,10 +26,10 @@
         } else {
             return "You Lose";
         }
-        return false; // default false returns if no statements are matched in the else if
+        return false;
     }
 
-    // Check to see how the play happenned
+    // Check to see who won
     $result = check($computer, $human);
 ?>
 
@@ -47,7 +43,7 @@
 <div class="container">
 <h1>Rock Paper Scissors</h1>
 <?php
-// If there is a 'username' in the $_REQUEST array, display a welcome message
+// Display a welcome message if username is set
 if ( isset($_REQUEST['username']) ) {
     echo "<p>Welcome: ";
     echo htmlentities($_REQUEST['username']);
@@ -68,7 +64,7 @@ if ( isset($_REQUEST['username']) ) {
 
 <pre>
 <?php
-if ( $human == -1 ) { // Select option (default option) in the HTML form
+if ( $human == -1 ) { // Default select option in the HTML form
     print "Please select a strategy and press Play.\n";
 } else if ( $human == 3 ) { // Test option (3) in the HTML form
     for($c=0;$c<3;$c++) {
